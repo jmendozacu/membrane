@@ -82,6 +82,15 @@
 .ib, .social-links a > span.icon{
     border-radius:0%;
 }
+
+.itemslider-new-wrapper .item{
+    text-align: center;
+}
+
+.searchautocomplete .searchautocomplete-placeholder{
+    top:42px !important; 
+}
+
 /***************Css For Home Page End*********************/
 
 /***************Css For Responsive Start*********************/

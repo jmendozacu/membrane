@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+* Indian Common Module
+*
+* @category   Common Code For Full Website
+* @author     Vishal Patel
+* @copyright  ©2016 Indian. All Rights Reserved  
+* @version    0.0.1
+*/
+-->
+<config>
+    <modules>
+        <Indian_Common>
+            <version>0.0.1</version>
+        </Indian_Common>
+    </modules>
+    <global>
+        <blocks>
+            <indian_common_block>
+                <class>Indian_Common_Block</class>
+            </indian_common_block>
+            <catalog>
+                <rewrite>
+                    <product_list_toolbar>Indian_Common_Block_Product_List_Toolbar</product_list_toolbar>
+                </rewrite>
+            </catalog>
+        </blocks>
+        <helpers>
+            <indian_common_helper>
+                <class>Indian_Common_Helper</class>
+            </indian_common_helper>
+        </helpers>
+        <models>
+            <catalog>
+                <rewrite>
+                    <config>Indian_Common_Model_Config</config>
+                </rewrite>
+            </catalog>      
+        </models>   
+    </global>
+</config>

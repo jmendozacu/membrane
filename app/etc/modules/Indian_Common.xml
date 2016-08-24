@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ /**
+ * Indian Common Module
+ *
+ * @category   Common Code For Full Website
+ * @author     Vishal Patel
+ * @copyright  ©2016 Indian All Rights Reserved  
+ * @version    0.0.1
+ */
+ -->
+<config>
+    <modules>
+        <Indian_Common>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Indian_Common>
+    </modules>
+</config>

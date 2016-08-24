@@ -40,30 +40,3 @@
     border-color: #eeeeee;
     color:#333333;
 }
-
-#search_autocomplete{
-    margin-top:36px;
-    width: 100%;
-}
-
-.searchautocomplete .searchautocomplete-placeholder::before{
-    border-color:transparent transparent #000;
-}
-
-#search{
-    padding-left: 45px;
-}
-
-.searchautocomplete .nav-search-in .category{
-    height:36px;
-    width: 40px;
-}
-
-.searchautocomplete .nav-search-in .category-fake{
-    padding-top: 4px;
-}
-
-.searchautocomplete .nav-search-in .nav-down-arrow{
-    top:16px;
-    right:8px;
-}
