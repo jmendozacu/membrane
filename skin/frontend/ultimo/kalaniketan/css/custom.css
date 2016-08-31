@@ -91,7 +91,20 @@
     top:42px !important; 
 }
 
+ul.disc li{
+    list-style: square;
+    padding:5px 0px;
+}
+
 /***************Css For Home Page End*********************/
+
+
+/***************Css For Product Page Start*********************/
+.img-box-style1 .product-image {
+    padding: 0px !important;
+}
+/***************Css For Product Page End*********************/
+
 
 /***************Css For Responsive Start*********************/
 @media screen and (max-width: 767px){
