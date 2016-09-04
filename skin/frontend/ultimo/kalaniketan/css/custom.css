@@ -96,6 +96,21 @@ ul.disc li{
     padding:5px 0px;
 }
 
+#nav.nav-regular .classic ul > li {
+    padding-bottom: 12px;
+}
+
+
+#nav .nav-panel--dropdown .classic a {
+    border-bottom: 1px solid #BE1E2D;
+    text-transform: none;
+}
+
+.products-grid .item:hover {
+    outline: 1px solid #9E1F63;
+    outline-offset: -2px;
+}
+
 /***************Css For Home Page End*********************/
 
 
