@@ -118,13 +118,280 @@ ul.disc li{
 .img-box-style1 .product-image {
     padding: 0px !important;
 }
+
+.catalog-product-view .custom_product_default_message .feature.first {
+    margin-top: 3px !important;
+}
+
+.catalog-product-view .custom_product_default_message .no-margin {
+    line-height: 36px;
+}
+
+.catalog-product-view .product .ib, .catalog-product-view .product .feature > span.icon, .catalog-product-view .product .social-links a > span.icon {
+    height: 36px;
+    line-height: 36px;
+    margin-right: 5px !important;
+    width: 36px;
+}
+
+.custom_product_default_message .feature.indent{
+    padding-left:0px;
+}
+
+.custom_product_default_message .feature.indent > .ic, .feature.indent > span.icon{
+    margin-left: 0px;
+}
+
 /***************Css For Product Page End*********************/
+
+/***************Css For Category Page Start*********************/
+/*****************Css For Category Page Start*****************/
+
+.catalog-category-view .pages li:hover{
+    border-radius: 20%;
+}
+
+.catalog-category-view .pages li a:hover{
+    border-radius: 20%;
+}
+
+.catalog-category-view .grid.ic.ic-grid:hover{
+    border-radius: 20%;
+}
+
+.catalog-category-view .ic-list:hover{
+    border-radius: 20%; 
+}
+
+.amshopby-slider-ui .ui-slider-range{
+    background-color: #e5e5e5;
+}
+
+.amshopby-slider-ui .ui-slider-handle{
+    background-color: #9E1F63;
+    border:none;
+}
+
+
+.catalog-category-view dl {
+    border: 1px solid #e5e5e5;
+    padding: 10px !important;
+}
+
+.block-layered-nav .block-content > dl > dt{
+    padding:5px;
+    background-color: #9E1F63;
+    color:#fff;
+}
+
+.block-layered-nav .block-content > dl > dd{
+    margin-top: 10px;
+    padding: 0px;
+    margin-bottom: 20px;
+}
+
+.amshopby-slider-price{
+    color: #000;
+}
+
+.amshopby-slider-price{
+    color: #000;
+}
+
+#amshopby-price-from-slider{
+    color: #000;
+}
+
+#amshopby-price-to-slider{
+    color: #000;
+}
+
+.mCSB_container > li{
+    margin-bottom: 5px;
+}
+
+.mCustomScrollbar input.input-text{
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    height: 25px;
+    padding: 2px;
+    width: 100%;
+}
+
+.mCSB_container input.input-text:hover{
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+}
+
+.ui-slider .ui-slider-handle{
+    width: 5px;
+}
+
+.amshopby-attr-selected{
+    color: #9E1F63;
+}
+
+.catalog-category-view .block-layered-nav dl dd ol > li > a{
+    background-color: none;
+}
+
+.catalog-category-view .category-description.std p{
+    color: #000 !important;
+    text-align: justify;
+}
+
+.catalog-category-view .category-description p:empty {
+    display: none !important;
+}
+
+.catalog-category-view .category-description{
+    margin:10px 0;
+}
+
+.catalog-category-view .block-title span{
+    font-weight: bold;
+}
+
+.catalog-category-view .sorter{
+    float: left;
+}
+
+.catalog-category-view .toolbar .pager{
+    float: right; 
+    border-top: none;
+}
+
+.product-view .product-type-data, .product-view .product-type-data .price-box, .container1-wrapper, .container2-wrapper, .product-view .add-to-box, .category-products-grid .item, .products-list li.item, .remember-me-popup h3, .map-popup-heading{
+    border:none;
+}
+
+.catalog-category-view .toolbar-bottom .sorter{
+    display: block;
+}
+
+.catalog-category-view .toolbar-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.catalog-category-view .sorter,.catalog-category-view .pager{
+    padding: 5px 0;
+}
+
+.catalog-category-view .toolbar select{
+    height: auto;
+    padding: 4px;
+}
+
+.catalog-category-view .sorter, .catalog-category-view .pager{
+    line-height: 28px;
+}
+
+.sorter .view-mode .grid, .sorter .view-mode .list, .sorter .sort-by .category-asc, .sorter .sort-by .category-desc, .pager .pages .current, .pager .pages li a{
+    height: 28px;
+    line-height: 28px;
+    width: 28px;
+    font-size: 13px;
+}
+
+.catalog-category-view .pager .pages ol{
+    vertical-align: top;
+}
+
+.catalog-category-view .block .actions, .section-line, .buttons-set, .toolbar{
+    margin-bottom: 5px;
+}
+
+.catalog-category-view .toolbar-bottom .toolbar{
+    margin-bottom: 0px;
+}
+
+.category-products-grid .item{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+div.amshopby-overlay div{
+    background-image: url(../images/circle_ajax.gif);
+}
+
+.catalog-category-view  .page-title h1{
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.select2-container{
+    min-width: 20%;
+}
+
+.select2-container--default .select2-selection--single{
+    border-radius: 0px;
+    border: 1px solid #e5e5e5;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+    color: #000;
+    font-size: 13px;
+    line-height: 26px;
+}
+
+.select2-container--open .select2-dropdown--below{
+    border:1px solid #e5e5e5;
+    border-radius: 0px; 
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+    background-color: #9E1F63;
+}
+
+.select2-results__option{
+    text-align: left;
+    padding: 3px;
+    line-height: 18px;
+    padding-left: 8px;
+}
+
+.select2-container--default .select2-results__option[aria-selected="true"]{
+    background-color: #e5e5e5;
+    color :#000;
+}
+
+.catalog-category-view .sorter .sort-by{
+    background: none;
+}
+
+.block-layered-nav .block-content > dl > dt::after{
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #fff;
+    border-right: none;
+}
+
+.block-layered-nav .block-content.accordion-open > dl > dt.current:after {
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-top: 5px solid #fff;
+    border-bottom: none;
+}
+
+/***************Css For Category Page End*********************/
 
 
 /***************Css For Responsive Start*********************/
 @media screen and (max-width: 767px){
     .home_below_slider .grid12-4{
         margin-bottom: 20px;
+    }
+
+    .catalog-category-view dl{
+        border:none;
+    }
+
+    .catalog-category-view .block-layered-nav .block-content > dl > dt {
+        padding: 7px 10px 7px 25px;
+        text-transform: none;
     }
 }    
 
