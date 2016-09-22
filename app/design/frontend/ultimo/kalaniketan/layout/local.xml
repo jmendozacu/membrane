@@ -172,7 +172,7 @@
 
             <!-- Custom CSS (has to be enabled in admin) -->
             <action method="addCss"
-                                ifconfig="ultimo/customization/custom_css">
+                    ifconfig="ultimo/customization/custom_css">
                 <stylesheet>css/custom.css</stylesheet>
             </action>
 			
@@ -680,7 +680,7 @@
 		
         <reference name="top.links">
             <action method="addLink"
-                                ifconfig="ultimo/header/signup" translate="label title">
+                    ifconfig="ultimo/header/signup" translate="label title">
                 <label>Sign Up</label>
                 <url>customer/account/create</url>
                 <title>Sign Up</title>
@@ -784,7 +784,7 @@
         </reference>
 
         <reference name="product.info">
-		
+           
             <!-- Change review summary template: removed links to review page. IMPORTANT: new template file. -->
             <action method="addReviewSummaryTemplate">
                 <type>default</type>
@@ -811,6 +811,7 @@
                     </block>
                 </block>
             </block>
+            
 
             <!-- Tabs. They are displayed inside the block with product collateral data. -->
             <block type="catalog/product_view_tabs" name="product.info.tabs" as="info_tabs" template="catalog/product/view/tabs.phtml" >
@@ -842,7 +843,7 @@
                 <!-- Reviews-->
                 <!-- Do not change 'tabreviews' alias. It is needed in JS scripts -->
                 <action method="addTab" translate="title" module="review"
-                                        ifconfig="ultimo/product_page/collateral_reviews">
+                        ifconfig="ultimo/product_page/collateral_reviews">
                     <alias>tabreviews</alias>
                     <title>Reviews</title>
                     <block>review/product_view_list</block>
@@ -851,7 +852,7 @@
 				
                 <!-- Tags -->
                 <action method="addTab" translate="title" module="tag"
-                                        ifconfig="ultimo/product_page/collateral_tags">
+                        ifconfig="ultimo/product_page/collateral_tags">
                     <alias>tags</alias>
                     <title>Product Tags</title>
                     <block>tag/product_list</block>
@@ -879,7 +880,7 @@
 
                 <!-- Related products -->
                 <action method="addTab" translate="title" module="catalog"
-                                        ifconfig="ultimo/product_page/collateral_related">
+                        ifconfig="ultimo/product_page/collateral_related">
                     <alias>related</alias>
                     <title>Related Products</title>
                     <block>catalog/product_list_related</block>
@@ -888,7 +889,7 @@
 
                 <!-- Up-sell products -->
                 <action method="addTab" translate="title" module="catalog"
-                                        ifconfig="ultimo/product_page/collateral_upsell">
+                        ifconfig="ultimo/product_page/collateral_upsell">
                     <alias>upsell</alias>
                     <title>Other Products</title>
                     <block>catalog/product_list_upsell</block>
@@ -1097,13 +1098,13 @@
         we also need to remove it from "product.info.additional". -->
         <reference name="product_tag_list">
             <action method="addToParentGroup"
-                                ifconfig="ultimo/product_page/collateral_tags">
+                    ifconfig="ultimo/product_page/collateral_tags">
                 <group>detailed_info</group>
             </action>
         </reference>
         <reference name="product.info.additional">
             <action method="unsetChild"
-                                ifconfig="ultimo/product_page/collateral_tags">
+                    ifconfig="ultimo/product_page/collateral_tags">
                 <name>product_tag_list</name>
             </action>
         </reference>
@@ -1112,13 +1113,13 @@
         Block with reviews is already added to "product.info", so if we assign it to the group of collateral data, we need to remove it from "product.info.additional". -->
         <reference name="product.reviews">
             <action method="addToParentGroup"
-                                ifconfig="ultimo/product_page/collateral_reviews">
+                    ifconfig="ultimo/product_page/collateral_reviews">
                 <group>detailed_info</group>
             </action>
         </reference>
         <reference name="product.info">
             <action method="unsetChild"
-                                ifconfig="ultimo/product_page/collateral_reviews">
+                    ifconfig="ultimo/product_page/collateral_reviews">
                 <name>reviews</name>
             </action> <!-- Remove by alias! -->
         </reference>
@@ -1141,13 +1142,13 @@
         we also need to remove it from "product.info". -->
         <reference name="related_products_wrapper">
             <action method="addToParentGroup"
-                                ifconfig="ultimo/product_page/collateral_related">
+                    ifconfig="ultimo/product_page/collateral_related">
                 <group>detailed_info</group>
             </action>
         </reference>
         <reference name="product.info">
             <action method="unsetChild"
-                                ifconfig="ultimo/product_page/collateral_related">
+                    ifconfig="ultimo/product_page/collateral_related">
                 <name>related_products_wrapper</name>
             </action>
         </reference>
@@ -1157,15 +1158,18 @@
         we also need to remove it from "product.info". -->
         <reference name="upsell_products_wrapper">
             <action method="addToParentGroup"
-                                ifconfig="ultimo/product_page/collateral_upsell">
+                    ifconfig="ultimo/product_page/collateral_upsell">
                 <group>detailed_info</group>
             </action>
         </reference>
         <reference name="product.info">
             <action method="unsetChild"
-                                ifconfig="ultimo/product_page/collateral_upsell">
+                    ifconfig="ultimo/product_page/collateral_upsell">
                 <name>upsell_products_wrapper</name>
             </action> <!-- Remove by alias! -->
+            <!--Admyrin code for zipcode Start -->
+              <block type="core/template"  name="product_zipcode" as="product_zipcode" template="catalog/product/zipcode/index.phtml"/>
+            <!--Admyrin code for zipcode End -->  
         </reference>
 
         <!-- Remove "add to wishlist/compare" links from options box. It is already inserted in product view. -->

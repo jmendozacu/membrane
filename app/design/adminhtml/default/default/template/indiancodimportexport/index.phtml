@@ -1,0 +1,85 @@
+<style>
+    .adminhtml-codimportexport-index .content-header h3{
+        float:none;
+    }
+</style>
+<div class="content-header">
+    <h3 class="icon-head head-adminhtml-export">Export Cod</h3>    <p class="form-buttons"></p>
+</div>
+<div class="export entry-edit">
+    <form method="post" action="<?php echo  Mage::helper("adminhtml")->getUrl("adminhtml/codimportexport/export") ?>" id="cod_export_form">
+    <?php
+    $key = Mage::getSingleton('adminhtml/url')
+            ->getSecretKey("adminhtml/codimportexport/export/", "export");
+    ?>
+          <div><input type="hidden" name="form_key" value="<?php echo Mage::getSingleton('core/session')->getFormKey(); ?>" /></div>
+        <div class="entry-edit-head">
+            <h4 class="icon-head head-edit-form fieldset-legend">Export Settings</h4>
+            <div class="form-buttons"></div>
+        </div>
+        <div id="base_fieldset" class="fieldset ">
+            <div class="hor-scroll">
+                <table cellspacing="0" class="form-list">
+                    <tbody>
+                        <tr>
+                            <td class="label"><label for="file_format">Export File Format</label></td>
+                            <td class="value">
+                                <select class="required-entry select" title="Export File Format" name="file_format" id="file_format">
+                                    <option value="">Select</option>
+                                    <option value="csv">CSV</option>
+                                </select>            
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input class="form-button" type="submit" value="Export" name="exportsubmit"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+   
+    cod_export_form = new varienForm('cod_export_form', '');
+   
+</script>
+
+<div class="content-header">
+    <h3 class="icon-head head-adminhtml-export">Import Cod</h3>    <p class="form-buttons"></p>
+</div>
+<div class="import entry-edit">
+    <form enctype="multipart/form-data" method="post" action="<?php echo  Mage::helper("adminhtml")->getUrl("adminhtml/codimportexport/import") ?>" id="cod_import_form">
+    <?php
+    $key = Mage::getSingleton('adminhtml/url')
+            ->getSecretKey("adminhtml/codimportexport/import/", "import");
+    ?>
+          <div><input type="hidden" name="form_key" value="<?php echo Mage::getSingleton('core/session')->getFormKey(); ?>" /></div>
+        <div class="entry-edit-head">
+            <h4 class="icon-head head-edit-form fieldset-legend">Import Settings</h4>
+            <div class="form-buttons"></div>
+        </div>
+        <div id="base_fieldset" class="fieldset ">
+            <div class="hor-scroll">
+                <table cellspacing="0" class="form-list">
+                    <tbody>
+                        <tr>
+                            <td class="label"><label for="file_format">Import Csv File</label></td>
+                           <td><input type="file" class="required-entry" title="Select File to Import" value="" name="import_file" id="import_file"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input class="form-button" type="submit" value="Import" name="importsubmit"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+   
+    cod_import_form = new varienForm('cod_import_form', '');
+   
+</script>

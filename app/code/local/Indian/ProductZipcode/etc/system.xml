@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+    <sections>
+        <indian_product_zipcode translate="label" module="indian_product_zipcode_helper">
+            <label>Product Page Zipcode</label>
+            <tab>indian_extension</tab>
+            <sort_order>900</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <indian_product_zipcode_group translate="label" module="indian_product_zipcode_helper">
+                    <label>Product Page Zipcode Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1000</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <indian_product_zipcode_enable translate="label">
+                            <label>Enable Extension</label>
+                            <comment>To Enable Extension Select "Yes" To Disable Select "No"</comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </indian_product_zipcode_enable>
+                    </fields>
+                </indian_product_zipcode_group>
+            </groups>
+        </indian_product_zipcode>
+    </sections>
+</config>

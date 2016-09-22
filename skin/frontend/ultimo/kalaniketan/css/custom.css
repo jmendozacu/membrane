@@ -142,10 +142,344 @@ ul.disc li{
     margin-left: 0px;
 }
 
+.product_page_zipcode .paypal_wrapper{
+    float: left;
+    width: 48%;
+}
+
+.product_page_zipcode .other_wrapper{
+    float: right;
+    margin-left: 5px;
+    width: 50%;
+}
+
+#floatingBarsG{
+    position:relative;
+    width:28px;
+    height:35px;
+    clear:both;
+    text-align: center;
+    display: none;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+.blockG{
+    position:absolute;
+    background-color:rgb(255,255,255);
+    width:4px;
+    height:11px;
+    border-radius:4px 4px 0 0;
+    -o-border-radius:4px 4px 0 0;
+    -ms-border-radius:4px 4px 0 0;
+    -webkit-border-radius:4px 4px 0 0;
+    -moz-border-radius:4px 4px 0 0;
+    transform:scale(0.4);
+    -o-transform:scale(0.4);
+    -ms-transform:scale(0.4);
+    -webkit-transform:scale(0.4);
+    -moz-transform:scale(0.4);
+    animation-name:fadeG;
+    -o-animation-name:fadeG;
+    -ms-animation-name:fadeG;
+    -webkit-animation-name:fadeG;
+    -moz-animation-name:fadeG;
+    animation-duration:1.2s;
+    -o-animation-duration:1.2s;
+    -ms-animation-duration:1.2s;
+    -webkit-animation-duration:1.2s;
+    -moz-animation-duration:1.2s;
+    animation-iteration-count:infinite;
+    -o-animation-iteration-count:infinite;
+    -ms-animation-iteration-count:infinite;
+    -webkit-animation-iteration-count:infinite;
+    -moz-animation-iteration-count:infinite;
+    animation-direction:normal;
+    -o-animation-direction:normal;
+    -ms-animation-direction:normal;
+    -webkit-animation-direction:normal;
+    -moz-animation-direction:normal;
+}
+
+#rotateG_01{
+    left:0;
+    top:13px;
+    animation-delay:0.45s;
+    -o-animation-delay:0.45s;
+    -ms-animation-delay:0.45s;
+    -webkit-animation-delay:0.45s;
+    -moz-animation-delay:0.45s;
+    transform:rotate(-90deg);
+    -o-transform:rotate(-90deg);
+    -ms-transform:rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+    -moz-transform:rotate(-90deg);
+}
+
+#rotateG_02{
+    left:4px;
+    top:4px;
+    animation-delay:0.6s;
+    -o-animation-delay:0.6s;
+    -ms-animation-delay:0.6s;
+    -webkit-animation-delay:0.6s;
+    -moz-animation-delay:0.6s;
+    transform:rotate(-45deg);
+    -o-transform:rotate(-45deg);
+    -ms-transform:rotate(-45deg);
+    -webkit-transform:rotate(-45deg);
+    -moz-transform:rotate(-45deg);
+}
+
+#rotateG_03{
+    left:12px;
+    top:1px;
+    animation-delay:0.75s;
+    -o-animation-delay:0.75s;
+    -ms-animation-delay:0.75s;
+    -webkit-animation-delay:0.75s;
+    -moz-animation-delay:0.75s;
+    transform:rotate(0deg);
+    -o-transform:rotate(0deg);
+    -ms-transform:rotate(0deg);
+    -webkit-transform:rotate(0deg);
+    -moz-transform:rotate(0deg);
+}
+
+#rotateG_04{
+    right:4px;
+    top:4px;
+    animation-delay:0.9s;
+    -o-animation-delay:0.9s;
+    -ms-animation-delay:0.9s;
+    -webkit-animation-delay:0.9s;
+    -moz-animation-delay:0.9s;
+    transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+}
+
+#rotateG_05{
+    right:0;
+    top:13px;
+    animation-delay:1.05s;
+    -o-animation-delay:1.05s;
+    -ms-animation-delay:1.05s;
+    -webkit-animation-delay:1.05s;
+    -moz-animation-delay:1.05s;
+    transform:rotate(90deg);
+    -o-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+}
+
+#rotateG_06{
+    right:4px;
+    bottom:3px;
+    animation-delay:1.2s;
+    -o-animation-delay:1.2s;
+    -ms-animation-delay:1.2s;
+    -webkit-animation-delay:1.2s;
+    -moz-animation-delay:1.2s;
+    transform:rotate(135deg);
+    -o-transform:rotate(135deg);
+    -ms-transform:rotate(135deg);
+    -webkit-transform:rotate(135deg);
+    -moz-transform:rotate(135deg);
+}
+
+#rotateG_07{
+    bottom:0;
+    left:12px;
+    animation-delay:1.35s;
+    -o-animation-delay:1.35s;
+    -ms-animation-delay:1.35s;
+    -webkit-animation-delay:1.35s;
+    -moz-animation-delay:1.35s;
+    transform:rotate(180deg);
+    -o-transform:rotate(180deg);
+    -ms-transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    -moz-transform:rotate(180deg);
+}
+
+#rotateG_08{
+    left:4px;
+    bottom:3px;
+    animation-delay:1.5s;
+    -o-animation-delay:1.5s;
+    -ms-animation-delay:1.5s;
+    -webkit-animation-delay:1.5s;
+    -moz-animation-delay:1.5s;
+    transform:rotate(-135deg);
+    -o-transform:rotate(-135deg);
+    -ms-transform:rotate(-135deg);
+    -webkit-transform:rotate(-135deg);
+    -moz-transform:rotate(-135deg);
+}
+
+
+
+@keyframes fadeG{
+    0%{
+        background-color:rgb(250,0,0);
+    }
+
+    100%{
+        background-color:rgb(255,255,255);
+    }
+}
+
+@-o-keyframes fadeG{
+    0%{
+        background-color:rgb(250,0,0);
+    }
+
+    100%{
+        background-color:rgb(255,255,255);
+    }
+}
+
+@-ms-keyframes fadeG{
+    0%{
+        background-color:rgb(250,0,0);
+    }
+
+    100%{
+        background-color:rgb(255,255,255);
+    }
+}
+
+@-webkit-keyframes fadeG{
+    0%{
+        background-color:rgb(250,0,0);
+    }
+
+    100%{
+        background-color:rgb(255,255,255);
+    }
+}
+
+@-moz-keyframes fadeG{
+    0%{
+        background-color:rgb(250,0,0);
+    }
+
+    100%{
+        background-color:rgb(255,255,255);
+    }
+}
+
+.catalog-product-view .product_page_zipcode select{
+    width: 100%;
+    height: 26px;
+    padding:0px;
+}
+
+.catalog-product-view .product_zipcode_label{
+    font-weight: bold;
+}
+
+.catalog-product-view .product_page_zipcode #india_error{
+    margin-bottom: 10px;
+}
+
+.catalog-product-view .product_page_zipcode #india_success{
+    margin-bottom: 10px;
+}
+
+.catalog-product-view .product-view .action-box{
+    margin:10px 0px;
+}
+
+.product_page_zipcode .other_wrapper{
+    float: right;
+    margin-left: 5px;
+    width: 50%;
+}
+
+.zipcode_warpper {
+    margin-top: 17px;
+}
+
+#other_success{
+    background-image: none;
+    margin-top: 10px;
+    padding: 10px !important;
+}
+
+#india_success{
+    background-image: none;
+    margin-top: 10px;
+    padding: 10px !important;
+}
+
+#india_error{
+    background-image: none;
+    margin-top: 10px;
+    padding: 10px !important;
+}
+
+.product_page_zipcode .paypal_wrapper{
+    float: left;
+    width: 48%;
+}
+
+.product_page_zipcode .other_wrapper{
+    float: right;
+    margin-left: 5px;
+    width: 50%;
+}
+
+.custom_display_none{
+    display:none;
+}
+
+.product_zipcode_label{
+    color: #000;
+}
+
+#zipcode_india {
+    border: 1px solid #e5e5e5;
+    height: 26px !important;
+    padding-left: 5px;
+    width: 43%;
+    float: left;
+}
+
+#zipcode_submit {
+    font-size: 15px;
+    height: 26px !important;
+    line-height: 26px !important;
+    width: 30%;
+    float: right;
+    margin-left: 5px;
+}
+
+
+.catalog-product-view .product-view .btn-cart, .catalog-product-view .btn-checkout {
+    font-size: 15px;
+}
+.catalog-product-view .product-primary-column button {
+    float: left;
+    line-height: 36px;
+    margin-right: 5px;
+    min-width: 138px;
+}
+
+.add-to-cart.left-side .qty-wrapper {
+    line-height: 36px;
+}
+
+
+
 /***************Css For Product Page End*********************/
 
 /***************Css For Category Page Start*********************/
-/*****************Css For Category Page Start*****************/
+
 
 .catalog-category-view .pages li:hover{
     border-radius: 20%;
@@ -380,6 +714,33 @@ div.amshopby-overlay div{
 
 
 /***************Css For Responsive Start*********************/
+
+@media screen and (max-width: 1280px){
+    #zipcode_india{
+        width: 38%;
+    }
+
+    #zipcode_submit{
+        width: 28%;
+    }
+
+}
+
+@media screen and (max-width: 960px){
+    .product_page_zipcode .paypal_wrapper{
+        width: 42%;
+    }
+
+    .product_page_zipcode .other_wrapper{
+        width: 55%;
+    }
+
+    #zipcode_submit{
+        padding:0px 20px;
+    }
+
+}    
+
 @media screen and (max-width: 767px){
     .home_below_slider .grid12-4{
         margin-bottom: 20px;
@@ -392,6 +753,72 @@ div.amshopby-overlay div{
     .catalog-category-view .block-layered-nav .block-content > dl > dt {
         padding: 7px 10px 7px 25px;
         text-transform: none;
+    }
+
+    .product_page_zipcode .paypal_wrapper{
+        width: 48%;
+    }
+
+    .product_page_zipcode .other_wrapper{
+        width: 50%;
+    }
+
+    #zipcode_submit{
+        width: 32%;
+    }
+
+    #zipcode_submit{
+        padding:0px 25px;
+    }
+
+    #zipcode_india{
+        width: 44%;
+    }
+
+}    
+
+@media screen and (max-width: 640px){
+    .product_page_zipcode .paypal_wrapper{
+        width: 45%;
+    }
+
+    .product_page_zipcode .other_wrapper{
+        width: 52%;
+    }
+
+    #zipcode_india{
+        width: 42%;
+    }
+
+    #zipcode_submit{
+        width: 25%;
+    }
+}    
+
+@media screen and (max-width: 480px){
+
+    .product_page_zipcode .paypal_wrapper{
+        width: 43%;
+    }
+
+    .product_page_zipcode .other_wrapper{
+        width: 51%;
+    }
+
+    .product_page_zipcode .paypal_wrapper{
+        width: 41%;
+    }
+
+    .product_page_zipcode .other_wrapper{
+        width: 57%;
+    }
+
+    #zipcode_india{
+        width: 41%;
+    }
+
+    #zipcode_submit{
+        width: 21%;
     }
 }    
 

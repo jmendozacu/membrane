@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <indian_codimportexport module="indian_codimportexport_helper">
+            <title>Indian Cod Import/Export</title>
+            <sort_order>71</sort_order>
+            <children>
+                <list module="indian_codimportexport_helper">
+                    <title>Cod Import/Export</title>
+                    <sort_order>0</sort_order>
+                    <action>adminhtml/codimportexport/index</action>
+                </list>
+            </children>
+        </indian_codimportexport>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>                
+                    <indian_codimportexport translate="title" module="indian_codimportexport_helper">
+                        <title>Indian Cod Import/Export</title>
+                        <sort_order>1</sort_order>
+                    </indian_codimportexport>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

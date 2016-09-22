@@ -1,0 +1,146 @@
+<?php
+
+$_product = Mage::registry('current_product');
+$checkIsEnable = Mage::helper('indian_product_zipcode_helper')->getProductZipcodeExtensionEnable();
+if ($checkIsEnable && $_product->isSaleable()) {
+    $resource = Mage::getSingleton('core/resource');
+    $readConnection = $resource->getConnection('core_read');
+    $writeConnection = $resource->getConnection('core_write');
+    $tableName = $resource->getTableName('shipping_tablerate');
+    $query = "SELECT distinct(dest_country_id) FROM $tableName";
+    $results = $readConnection->fetchAll($query);
+    $countryArray = array();
+    foreach ($results as $key) {
+        $country = Mage::getModel('directory/country')->loadByCode($key['dest_country_id']);
+        $countryArray[] = array('code' => $key['dest_country_id'], 'name' => $country->getName());
+    }
+    ?>
+    <div class="product_page_zipcode">
+        <div class="paypal_wrapper">
+            <label class="product_zipcode_label">Check Serviceability</label>
+            <div class="input-box">
+                <select class="form-control"  id="zip_country_id" name="zip_country_id">
+                    <option value="">Choose an Option...</option>
+                    <?php foreach ($countryArray as $key): ?>
+                        <option value="<?php echo $key['code']; ?>" <?php echo ($key['code'] == 'IN') ? 'selected' : '' ?>><?php echo $key['name']; ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>    
+            <div class="alert alert-success custom_display_none success-msg" id='other_success'>
+                Pay via PayPal
+            </div>
+        </div>
+        <div class="other_wrapper">
+            <div class="zipcode_warpper">
+                <input type='text' class="form-control" id='zipcode_india' name='zipcode_india' value='' placeholder="zipcode">
+                <div id="floatingBarsG">
+                    <div class="blockG" id="rotateG_01"></div>
+                    <div class="blockG" id="rotateG_02"></div>
+                    <div class="blockG" id="rotateG_03"></div>
+                    <div class="blockG" id="rotateG_04"></div>
+                    <div class="blockG" id="rotateG_05"></div>
+                    <div class="blockG" id="rotateG_06"></div>
+                    <div class="blockG" id="rotateG_07"></div>
+                    <div class="blockG" id="rotateG_08"></div>
+                </div>
+                <span href="javascript:void(0)" class="btn button hvr-round-corners"  id='zipcode_submit'>Check</span>
+                <div class="clearer"></div>
+                <div class="alert alert-success custom_display_none success-msg" id='india_success'></div>
+                <div class="alert alert-danger custom_display_none error-msg" id='india_error'></div>
+            </div>
+        </div>    
+
+    </div>
+    <script>
+        $j(document).ready(function () {
+            loadFunction();
+            $j("#zip_country_id").change(function () {
+                //setTimeout(explode, 8000);
+                loadFunction();
+            });
+        });
+        function loadFunction() {
+            var checkcountry = $j('#zip_country_id').val();
+            if (checkcountry == 'IN') {
+                $j('#zipcode_india').css("display", "block");
+                $j('#zipcode_submit').css("display", "block");
+                $j('#other_success').css('display', 'none');
+            } else {
+                $j('#zipcode_india').css("display", "none");
+                $j('#zipcode_submit').css("display", "none");
+                $j('#other_success').css('display', 'block');
+            }
+            $j('#india_success').css('display', 'none');
+            $j('#india_error').css('display', 'none');
+            $j('#floatingBarsG').css('display', 'none');
+
+        }
+
+        $j("#zipcode_submit").click(function () {
+            //setTimeout(explode, 8000);
+            $j('#india_error').css('display', 'none');
+            $j('#india_success').css('display', 'none');
+            var validation = true;
+            var zipVal = $j('#zipcode_india').val();
+            var zipCountry = $j('#zip_country_id').val();
+            var checkEmpty = isEmpty(zipVal);
+            if (checkEmpty) {
+                validation = false;
+                $j('#india_error').html("Zipcode Cant Be Empty");
+                $j('#india_error').css('display', 'block');
+            }
+            if (!/^\d{6}$/.test(zipVal)) {
+                validation = false;
+                $j('#india_error').html("Zipcode Must Be Numeric With 6 Digits Without Space");
+                $j('#india_error').css('display', 'block');
+            }
+            if (validation == true) {
+                $j('#floatingBarsG').css('display', 'block');
+                $j('#zipcode_submit').css('display', 'none');
+                $j.ajax({
+                    type: 'POST',
+                    url: '<?php echo $this->getUrl('productzipcode'); ?>',
+                    data: {
+                        'product_zipcode': zipVal,
+                        'product_country': zipCountry // <-- the $ sign in the parameter name seems unusual, I would avoid it
+                    },
+                    success: function (data) {
+                        $j('#floatingBarsG').css('display', 'none');
+                        $j('#india_error').css('display', 'none');
+                        $j('#india_success').css('display', 'none');
+                        $j('#floatingBarsG').css('display', 'none');
+                        $j('#zipcode_submit').css('display', 'block');
+                        var obj = $j.parseJSON(data);
+                        var isError = obj.errormessage;
+                        var isSuccess = obj.successmessage;
+                        if (isError) {
+                            err = '';
+                            for (var i = 0, l = isError.length; i < l; i++) {
+                                err += isError[ i ];
+                            }
+                            $j('#india_error').html(err);
+                            $j('#india_error').css('display', 'block');
+                        } else {
+                            succ = '';
+                            for (var i = 0, l = isSuccess.length; i < l; i++) {
+                                succ += isSuccess[ i ];
+                            }
+                            $j('#india_success').html(succ);
+                            $j('#india_success').css('display', 'block');
+                        }
+                    }
+                });
+            }
+        })
+
+        function isEmpty(str) {
+            return (!str || 0 === str.length);
+        }
+
+        function explode() {
+            $j('#other_success').css('display', 'none');
+            $j('#india_success').css('display', 'none');
+            $j('#india_error').css('display', 'none');
+        }
+    </script>
+<?php } ?>        

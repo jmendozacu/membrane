@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+    <modules>
+        <Indian_ProductZipcode>
+            <version>0.0.1</version>
+        </Indian_ProductZipcode>
+    </modules>
+    <global>
+        <helpers>
+            <indian_product_zipcode_helper>
+                <class>Indian_ProductZipcode_Helper</class>
+            </indian_product_zipcode_helper>
+        </helpers>
+    </global>    
+    <frontend>
+        <routers>
+            <indian_product_zipcode>
+                <use>standard</use>
+                <args>
+                    <module>Indian_ProductZipcode</module>
+                    <frontName>productzipcode</frontName>
+                </args>
+            </indian_product_zipcode>
+        </routers>
+    </frontend>
+</config>
