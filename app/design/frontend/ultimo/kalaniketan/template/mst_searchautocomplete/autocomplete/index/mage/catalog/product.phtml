@@ -1,0 +1,36 @@
+<?php
+$_configHelper = Mage::helper('searchautocomplete/config');
+$_product      = $this->getItem();
+?>
+<li data-url="<?php echo $_product->getProductUrl() ?>">
+    <?php if ($_configHelper->isShowImage()): ?>
+    <div class="searchautocomlete-image">
+        <img src="<?php echo $this->helper('mstcore/image')->init($_product, 'thumbnail', 'catalog/product')->resize($_configHelper->getImageWidth(), $_configHelper->getImageHeight()) ?>" width="<?php echo $_configHelper->getImageWidth() ?>px" height="<?php echo $_configHelper->getImageHeight() ?>px"/>
+    </div>
+    <?php endif ?>
+    <a class="name highlight" href="<?php echo $_product->getProductUrl() ?>"><?php echo Mage::helper('indian_common_helper')->formatString($_product->getName(),40); ?></a>
+    <p class="sku_wrapper"><span class="sku_title">Sku: </span><a href="<?php echo $_product->getProductUrl() ?>"><?php echo $_product->getSku();?></a></p>
+    <?php if ($_configHelper->isShowRating()): ?>
+        <?php $_reviewSummary = $_configHelper->getReviewSummary($_product->getId()); ?>
+        <?php if ($_reviewSummary->getReviewsCount() > 0) : ?>
+        <div class="ratings">
+            <div class="rating-box">
+                <div class="rating" style="width:<?php echo $_reviewSummary->getRatingSummary() ?>%"></div>
+            </div>
+            <span class="reviews"><?php echo $_reviewSummary->getReviewsCount() ?> Review(s)</span>
+        </div>
+        <?php endif ?>
+    <?php endif ?>
+
+    <?php if ($_configHelper->isShowShortDescription()): ?>
+        <div class="highlight">
+        <?php echo Mage::helper('core/string')->truncate(strip_tags($this->getProductShortDescription($_product)), $_configHelper->getShortDescriptionLen()) ?>
+        </div>
+    <?php endif ?>
+
+    <?php if ($_configHelper->isShowPrice()): ?>
+        <?php echo $this->getPriceHtml($_product, false) ?>
+    <div class="autocomplete_off"><?php echo Mage::helper('indian_common_helper')->productDiscount($_product);?>% <br>Off</br></div>
+        <div class="clearfix"></div>
+    <?php endif ?>
+</li>

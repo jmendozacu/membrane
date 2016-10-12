@@ -11,6 +11,16 @@
  */
 
 /***************Css For Home Page Start*********************/
+
+h2.product-name a, h3.product-name a, h4.product-name a, h5.product-name a, p.product-name a {
+    font-size: 13px;
+}
+
+
+.special-price .price, .special-price .price-label, .minimal-price-link .price{
+    color:#9e1f63 !important;
+}
+
 .header-regular .form-search{
     width: 80%;
 }
@@ -91,6 +101,16 @@
     top:42px !important; 
 }
 
+
+.searchautocomplete .sku_title {
+    background-color: #666;
+    color: #fff;
+    font-style: italic;
+    margin-right: 2px;
+    padding: 1px 2px;
+    font-weight: bold;
+}
+
 ul.disc li{
     list-style: square;
     padding:5px 0px;
@@ -113,6 +133,121 @@ ul.disc li{
 
 /***************Css For Home Page End*********************/
 
+
+/*****************Es Newsletter popup Css Start*********************/
+#esns_background_layer{
+    position: fixed; 
+}
+
+#esns_box_layer{
+    width: 370px;
+    box-shadow: 0 0 10px #fff;
+    border-radius:10px;
+}
+
+
+#esns_box_title{
+    width: 100%;
+    background: none;
+    background: none;
+    color: #666666;
+}
+
+#esns_box_block_3{
+    width: 100%;
+}
+
+#esns_box_subscribe_input{
+    width: auto;
+}
+
+#esns_box_subscribe {
+    height: auto;
+    margin: 0px 0px 10px;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+}
+
+#esns_box_subscribe_submit{
+    width: auto;
+}
+
+#esns_box_subscribe_input input {
+    border: 1px solid #9E1F63;
+    height: 25px;
+    padding-left: 10px;
+    width: 243px;
+    margin:0px;
+}
+
+#esns_box_subscribe_submit {
+    float: left;
+    width: auto;
+}
+
+#esns_box_subscribe_submit a {
+    background-color:#9E1F63;
+    color: #fff;
+    font-weight: bold;
+    display: block;
+    font-size: 12px;
+    height: 27px;
+    line-height: 27px;
+    width: 110px;
+    font-size: 14px;
+    margin:0px;
+    background-image: none;
+}
+
+#esns_box_subscribe_response_error{
+    color: red;
+    margin:10px 0px;
+    font-family: Lato,arial,serif;
+}
+
+#esns_box_subscribe_response_success{
+    color: #3d6611;
+    margin:10px 0px;
+    font-family: Lato,arial,serif;
+}
+
+#esns_box_block_1{
+    font-family: Oswald,sans-serif;
+    font-size: 24px;
+    text-align: center;
+    line-height: 24px;
+    margin:5px 0px;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+#esns_box_block_2{
+    font-family: Montserrat,arial,serif;
+    font-size: 16px;
+    text-align: center;
+    line-height: 22px;
+    margin:5px 0px;
+    width: 100%;
+}
+
+#esns_box_block_3{
+    font-family: Lato,arial,serif;
+    font-size: 13px;
+    margin:10px 0px;
+    width: 100%;
+}
+
+.esns_box_lines{
+    background: none;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#newsletter_popup_loader{
+    margin: 10px 0px;
+}
+
+/*****************Es Newsletter popup Css End*********************/
 
 /***************Css For Product Page Start*********************/
 .img-box-style1 .product-image {
@@ -142,6 +277,52 @@ ul.disc li{
     margin-left: 0px;
 }
 
+
+.sticky-header .sticky-container, .dropdown.open > .dropdown-heading.cover, .dropdown.open .dropdown-content, .truncated .truncated_full_value .item-options, .nav-regular .nav-panel--dropdown, .form-search .search-autocomplete ul, .remember-me-popup, .map-popup, #subscribe-form .input-box .validation-advice {
+    box-shadow: none;
+}
+
+.searchautocomplete .searchautocomplete-placeholder{
+    border-radius: 0px;
+}
+
+.customMirasvitHeight {
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.searchautocomplete .searchautocomplete-placeholder ul{
+    padding:0px;
+}
+
+.searchautocomplete .mCSB_inside > .mCSB_container {
+    margin-right: 5px;
+}
+
+.searchautocomplete .mCSB_scrollTools{
+    width:5px;
+}
+
+.searchautocomplete .searchautocomplete-placeholder ul li{
+    border:none !important;
+}
+
+.searchautocomplete .searchautocomplete-placeholder ul li.active{
+    border-top:1px solid #9E1F63 !important;
+    border-bottom:1px solid #9E1F63 !important;
+    border-left: none !important;
+    border-right: none !important;
+    box-shadow: none !important;
+}
+
+.searchautocomplete li a strong{
+    color:#9E1F63;
+}
+
+.searchautocomplete .searchautocomplete-placeholder ul li .price-box{
+    float:left;
+}
+
 .product_page_zipcode .paypal_wrapper{
     float: left;
     width: 48%;
@@ -151,6 +332,19 @@ ul.disc li{
     float: right;
     margin-left: 5px;
     width: 50%;
+}
+
+.autocomplete_off,.autocomplete_off:hover{
+    color:#333333;
+    float: right;
+    border-left: 1px solid #333;
+    float: left;
+    margin-left: 5px;
+    padding-left: 5px;
+}
+
+.form-search .search-autocomplete li{
+    line-height:20px;
 }
 
 #floatingBarsG{
@@ -457,6 +651,12 @@ ul.disc li{
     width: 30%;
     float: right;
     margin-left: 5px;
+    background-color: #333333;
+    color:#fff;
+}
+
+#zipcode_submit:hover{
+    background-color: #9e1f63;
 }
 
 
@@ -474,7 +674,10 @@ ul.disc li{
     line-height: 36px;
 }
 
-
+.product-view .product-shop .product-name h1{
+    font-size: 20px;
+    text-transform:uppercase !important;
+}
 
 /***************Css For Product Page End*********************/
 
@@ -820,6 +1023,35 @@ div.amshopby-overlay div{
     #zipcode_submit{
         width: 21%;
     }
+}  
+
+@media screen and (max-width: 420px){
+    #esns_box_layer{
+        width: 275px;
+    }
+
+    #esns_box_subscribe_input{
+        width: 100%;
+        float:none;
+    }
+    #esns_box_subscribe_submit{
+        width: 100%;
+        float:none;
+        margin-top: 10px;
+    }
+
+    #esns_box_block_1{
+        width: 100%;
+    }
+
+    #esns_box_block_2{
+        width: 100%;
+    }
+
+    #esns_box_subscribe_input input{
+        width: 95%;
+    }
+
 }    
 
 /***************Css For Responsive End*********************/
