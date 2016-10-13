@@ -334,6 +334,10 @@ ul.disc li{
     width: 50%;
 }
 
+#search_autocomplete{
+    width: 99%;
+}
+
 .autocomplete_off,.autocomplete_off:hover{
     color:#333333;
     float: right;
