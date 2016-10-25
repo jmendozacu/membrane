@@ -18,17 +18,10 @@
  * versions in the future. If you wish to customize Magento for your
  * needs please refer to http://www.magento.com for more information.
  *
- * @category    Mage
- * @package     Mage_Uploader
+ * @category   Mage
+ * @package    Mage_Uploader
  * @copyright  Copyright (c) 2006-2016 X.commerce, Inc. and affiliates (http://www.magento.com)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
- */
-
-/**
- * Uploader Config Instance Abstract Model
- *
- * @category    Mage
- * @package     Mage_Uploader
  */
 
 /**
@@ -82,6 +75,7 @@
  *
  * Class Mage_Uploader_Model_Config_Uploader
  */
+
 class Mage_Uploader_Model_Config_Uploader extends Mage_Uploader_Model_Config_Abstract
 {
     /**
