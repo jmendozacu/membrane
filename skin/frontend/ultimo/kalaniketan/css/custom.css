@@ -278,9 +278,7 @@ ul.disc li{
 }
 
 
-.sticky-header .sticky-container, .dropdown.open > .dropdown-heading.cover, .dropdown.open .dropdown-content, .truncated .truncated_full_value .item-options, .nav-regular .nav-panel--dropdown, .form-search .search-autocomplete ul, .remember-me-popup, .map-popup, #subscribe-form .input-box .validation-advice {
-    box-shadow: none;
-}
+
 
 .searchautocomplete .searchautocomplete-placeholder{
     border-radius: 0px;
