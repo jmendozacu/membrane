@@ -1,0 +1,155 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php $theme = Mage::helper('ultimo'); ?>
+
+<meta http-equiv="Content-Type" content="<?php echo $this->getContentType() ?>" />
+<title><?php echo $this->getTitle() ?></title>
+<?php if ($theme->getCfgLayout('responsive/responsive')): ?>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<?php endif; ?>
+<meta name="description" content="<?php echo htmlspecialchars($this->getDescription()) ?>" />
+<meta name="keywords" content="<?php echo htmlspecialchars($this->getKeywords()) ?>" />
+<meta name="robots" content="<?php echo htmlspecialchars($this->getRobots()) ?>" />
+<link rel="icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+<link rel="shortcut icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+
+
+
+<!-- To set up a sitelinks searchbox / Website Start -->
+<script type="application/ld+json"> 
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "name": "Indiankalaniketan",
+  "alternateName": "Indian Kalaniketan",
+  "url": "http://www.indiankalaniketan.com/",
+  "potentialAction": [{
+    "@type": "SearchAction",
+    "target": "http://www.indiankalaniketan.com/catalogsearch/result/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }]
+}
+</script>
+<!-- To set up a sitelinks searchbox /Website End -->
+
+
+<!-- To set up a social media Website Start -->
+<span itemscope itemtype="http://schema.org/Organization">
+  <link itemprop="url" href="http://www.indiankalaniketan.com/">
+  <a itemprop="sameAs" href="https://www.facebook.com/IndianKalaniketan/">Facebook</a>
+  <a itemprop="sameAs" href="https://www.instagram.com/indian_kalaniketan/">Instagram</a>
+</span>
+<!-- To set up a social media / Website end -->
+
+<!-- To set up a local business Website Start -->
+<script type="application/ld+json"> 
+{
+  "@context": "http://schema.org",
+  "@type": "Store",
+  "image": "http://www.indiankalaniketan.com/skin/frontend/ultimo/kalaniketan/images/website-logo.png",
+  "@id": "http://www.indiankalaniketan.com/",
+  "name": "Indiankalaniketan Online Store",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "202 Riddhi Residency, NR Jalaram Temple, L.P Savani Road",
+    "addressLocality": "Adajan",
+    "addressRegion": "Surat",
+    "postalCode": "395009",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 21.196367,
+    "longitude": 72.784567
+  },
+  "url": "http://www.indiankalaniketan.com/",
+  "telephone": "+91-9979225368 / +91-9825777205",
+  "email" : "indiankalaniketan@gmail.com",
+  "aggregateRating" : {
+    "@type" : "AggregateRating",
+    "ratingValue" : "4.9",
+    "bestRating" : "5",
+    "worstRating" : "4",
+    "ratingCount" : "5"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "10:00",
+      "closes": "18:00"
+    }
+  ]
+}
+</script>
+<!-- To set up a local business Website End -->
+
+<?php
+	$skinUrl = $this->getSkinUrl('');
+?>
+
+<!--[if lt IE 7]>
+<script type="text/javascript">
+//<![CDATA[
+    var BLANK_URL = '<?php echo $this->helper('core/js')->getJsUrl('blank.html') ?>';
+    var BLANK_IMG = '<?php echo $this->helper('core/js')->getJsUrl('spacer.gif') ?>';
+//]]>
+</script>
+<![endif]-->
+
+<?php echo $this->getCssJsHtml() ?>
+<?php echo $this->getChildHtml() ?>
+<?php echo $this->helper('core/js')->getTranslatorScript() ?>
+<?php echo $this->getIncludes() ?>
+
+
+
+<?php //Include Google Fonts
+	$amp = '&amp;';
+	$charSubset = '';
+	if ($subsets = $theme->getCfgDesign('font/primary_char_subset'))
+	{
+		$charSubset = "{$amp}subset={$subsets}";
+	}
+
+	$fontWeight = '';
+	if ($weight = $theme->getCfgDesign('font/primary_font_weight'))
+	{
+		$fontWeight = ':' . $weight;
+	}
+?>
+<?php if ($theme->getCfgDesign('font/primary_font_family_group') == 'google'): ?>
+	<link href='//fonts.googleapis.com/css?family=<?php echo str_replace(' ', '+', $theme->getCfgDesign('font/primary_font_family')); 
+		echo $fontWeight; echo $charSubset; ?>' rel='stylesheet' type='text/css' />
+<?php endif;?>
