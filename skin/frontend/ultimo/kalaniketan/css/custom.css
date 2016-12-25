@@ -130,6 +130,15 @@ ul.disc li{
     outline-offset: -2px;
 }
 
+
+.custom_paytm_wallet_notification{
+    text-align: center;
+    background-color: #be1e2d;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    
+}
 /***************Css For Home Page End*********************/
 
 
@@ -916,6 +925,14 @@ div.amshopby-overlay div{
 
 /***************Css For Category Page End*********************/
 
+
+.checkout-agreements .agreement-content{
+    max-height: 500px !important;
+}
+
+.checkout-agreements li{
+    background-color: #f5f5f5;
+}
 
 /***************Css For Responsive Start*********************/
 
