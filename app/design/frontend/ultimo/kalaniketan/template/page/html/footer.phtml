@@ -224,37 +224,3 @@
 </div> <!-- end: footer-container3 -->
 </div> <!-- end: footer-container2 -->
 </div> <!-- end: footer-container -->
-<!-- Christmas santa moving start -->
-<div class="santa">
-    <img src="http://www.khantil.com/new/image/christmas-sled-source_ulp.gif" style="z-index:999999999999 !important;" alt="">'
-</div>
-      <script type="text/javascript">
-        $j(document).ready(function() {
-
-            var windowWidth = $j(document).width();
-            var santa = $j('.santa');
-            santa_right_pos = windowWidth + santa.width();
-            santa.right = santa_right_pos;
-
-
-
-            function movesanta(){
-                santa.animate({right : windowWidth +  santa.width()},15000, function(){
-                    santa.css("right","-500px");
-                    setTimeout(function(){
-                        movesanta();
-                    },10000);
-                });
-            }
-            movesanta();
-        });
-    </script> 
-    <style>
-        .santa{
-            position: fixed;
-            bottom:10px;
-            right:-500px;
-        }
-        
-    </style>    
-<!-- Christmas santa moving end -->    
