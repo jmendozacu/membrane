@@ -49,7 +49,11 @@
             <action method="addItem">
                 <type>skin_js</type>
                 <name>js/jquery.mCustomScrollbar.concat.min.js</name>
-            </action>  
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/pace.js</name>
+            </action>    
 			
             <!-- CSS: -->
 			
